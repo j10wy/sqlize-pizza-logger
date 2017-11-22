@@ -1,0 +1,68 @@
+body {
+	background: darkred;
+	color: darkorange;
+}
+
+div.logo {
+	text-align: center;
+	padding: 25px;
+}
+
+div.logo img {
+	max-width: 250px;
+}
+
+div.pizzaStatus {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 10px;
+	max-width: 960px;
+	min-width: 480px;
+	margin: 0 auto;
+}
+
+div.item {
+	border: 1px solid orange;
+	text-align: left;
+	min-height: 150px;
+	padding: 25px;
+}
+
+form#newPizzaForm {
+	text-align: center;
+}
+
+form#newPizzaForm input {
+	margin: 15px auto;
+	padding: 10px 5px;
+}
+
+form#newPizzaForm input[type='text'] {
+	background-color: darkorange;
+	color: white;
+	width: 75%;
+	max-width: 400px;
+	border: 1px solid red;
+	font-size: 22px;
+}
+
+form#newPizzaForm input[type='submit'] {
+	color: white;
+	background-color: green;
+	border: 1px solid darkgreen;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+	width: 150px;
+}
+
+div[data-id] {
+	cursor: pointer;
+}
+
+div.pizza:hover {
+	background-color:orange;
+	color: darkred;
+}

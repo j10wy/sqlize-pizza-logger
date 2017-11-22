@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS pizza_db;
+CREATE DATABASE pizza_db;
+USE pizza_db;
+
+DROP TABLE IF EXISTS pizzas;
+
+CREATE TABLE pizzas (
+	id INT(13) AUTO_INCREMENT,
+	pizza_name VARCHAR(255),
+	devoured BOOLEAN,
+	date TIMESTAMP,
+	PRIMARY KEY(id)
+);
