@@ -1,21 +1,19 @@
-const orm = require('../config/orm');
-
-const pizza = {
-	selectAll: function (callback) {
-		orm.selectAll(function (resultsObject) {
-			callback(resultsObject);
-		});
-	},
-	insertOne: function (insertObj, callback) {
-		orm.insertOne(insertObj, function (resultsObject) {
-			callback(resultsObject);
-		});
-	},
-	updateOne: function (devouredUpdate, callback) {
-		orm.updateOne(devouredUpdate, function (resultsObject) {
-			callback(resultsObject);
-		});
-	}
-}
-
-module.exports = pizza;
+module.exports = function (sequelize, DataTypes) {
+	let Pizza = sequelize.define("pizza", {
+		pizza_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			validate: {
+				len: [1]
+			}
+		},
+		devoured: {
+			type: DataTypes.TEXT,
+			allowNull: false,
+			validate: {
+				len: [1]
+			}
+		}
+	})
+	return Pizza;
+};
